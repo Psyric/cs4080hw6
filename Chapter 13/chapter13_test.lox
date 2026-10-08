@@ -1,0 +1,39 @@
+class Doughnut {
+  cook() {
+    print "Fry until golden brown.";
+    inner();
+    print "Place in a nice box.";
+  }
+}
+
+class BostonCream < Doughnut {
+  cook() {
+    print "Pipe full of custard and coat with chocolate.";
+  }
+}
+
+BostonCream().cook();
+
+class A {
+  describe() {
+    return "A";
+  }
+}
+
+class B < A {}
+class C < B {}
+
+print C().describe();
+
+class Base {
+  init(value) {
+    this.value = value;
+  }
+
+  read() {
+    return this.value;
+  }
+}
+
+class Derived < Base {}
+print Derived("inherited initializer").read();
