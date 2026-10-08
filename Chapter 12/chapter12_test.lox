@@ -1,0 +1,22 @@
+class Cake {
+  init(flavor) {
+    this.flavor = flavor;
+  }
+
+  describe() {
+    return "The " + this.flavor + " cake.";
+  }
+}
+
+var cake = Cake("chocolate");
+print cake.flavor;
+print cake.describe();
+
+class Egotist {
+  speak() {
+    print this;
+  }
+}
+
+var callback = Egotist().speak;
+callback();
